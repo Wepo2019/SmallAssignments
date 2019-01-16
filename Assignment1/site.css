@@ -1,0 +1,85 @@
+/* EDIT BELOW THIS LINE */
+
+/* Add styles for section-1 */
+.section-1 {
+    max-height: 200px;
+}
+
+.section-1 > .flex-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-1 > .flex-item:nth-child(odd) {
+    flex-grow: 2;
+}
+
+.section-1 > .flex-item:nth-child(even) {
+    flex-grow: 1;
+}
+
+/* Add styles for section-2 */
+.section-2 {
+    flex-direction: column-reverse;
+    justify-content: center;
+}
+
+.section-2 > .flex-item:nth-child(1) {
+    flex-grow: 1;
+    width: 50%;
+    align-self: flex-start;
+}
+
+.section-2 > .flex-item:nth-child(5) {
+    flex-grow: 1;
+    width: 50%;
+    align-self: flex-end;
+}
+
+/* Add styles for section-3 */
+.section-3 {
+    flex-flow: column wrap;
+}
+
+.section-3 > .flex-item:first-child {
+    flex-basis: 100%;
+}
+
+.section-3 > .flex-item:last-child {
+    flex-basis: 100%;
+}
+
+.section-3 > .flex-item:nth-child(n+2):nth-child(-n+5) {
+    flex-basis: 50%;
+}
+
+/* Add styles for section-4 */
+.section-4 {
+    flex-flow: column wrap;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.section-4 > .flex-item {
+    width: 100px;
+    height: 60px;
+}
+
+/* Add styles for section-5 */
+.section-5 {
+    flex-direction: column-reverse;
+    flex-wrap: wrap-reverse;
+    align-content: space-around;
+    justify-content: center;
+}
+
+.section-5 > .space-invader:first-child {
+    order: 1;
+}
+
+/* Add styles for section-6 */
+
+/* Add styles for section-7 */
+
+/* Add styles for section-8 */
