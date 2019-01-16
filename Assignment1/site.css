@@ -80,48 +80,55 @@
 
 /* Add styles for section-6 */
 .section-6 {
-  justify-content: space-around;
-  align-items: flex-end;
-  flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: flex-end;
+    flex-direction: row-reverse;
 }
+
 /* Add styles for section-7 */
-.section-7 {
-  flex-direction: column;
-  flex-wrap: wrap-reverse;
+.section-7 {   
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.section-7 > .cartoon:not(.carebear-pink) {
+    flex-basis: 25%;
 }
 
 .section-7 > .carebear-blue {
-  order: 3;
+    order: 3;
 }
 
 .section-7 > .carebear-green {
-  order: 2;
+    order: 2;
 }
 
 .section-7 > .carebear-red {
-  order: 1;
+    order: 1;
 }
 
 .section-7 > .carebear-pink {
-  order: 5;
-  align-self: flex-end;
+    order: 5;
 }
 
 .section-7 > .carebear-yellow {
-  order: 4;
+    order: 4;
 }
+
 /* Add styles for section-8 */
 .section-8 {
-  flex-direction: column-reverse;
-  flex-wrap: wrap;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
 }
 
 .section-8 > .flex-item:first-child {
-  flex-grow: 1;
-  flex-basis: 100%;
+    flex-grow: 1;
+    flex-basis: 100%;
 }
 
 .section-8 > .flex-item:nth-child(n+2):nth-child(-n+6) {
-  flex-grow: 0.5;
-  flex-basis: 20%;
+    flex-grow: 0.5;
+    flex-basis: 20%;
 }
