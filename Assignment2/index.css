@@ -1,0 +1,81 @@
+/* Here below you should make your changes */
+@keyframes static {
+    /* Insert your changes */
+}
+
+@keyframes level-1 {
+    /* Insert your changes */
+}
+
+@keyframes move-cartridge {
+    /* Insert your changes */
+}
+
+.intro {
+    /* Insert your changes */
+    background-image: url("./resources/tv.png"), url("./resources/intro.png");
+    background-size: contain, 335px 250px;
+    background-position: 0 0, 25% 35%;
+    background-repeat: no-repeat;
+}
+
+.level-1 {
+    /* Insert your changes */
+}
+
+.static {
+    /* Insert your changes */
+    background-image: url("./resources/tv.png"), 
+    linear-gradient(90deg,
+    white 0%,
+    white 12.5%,
+    yellow 12.5%, 
+    yellow 25%, 
+    cyan 25%, 
+    cyan 37.5%, 
+    green 37.5%, 
+    green 50%, 
+    purple 50%, 
+    purple 62.5%,
+    red 62.5%, 
+    red 75%, 
+    blue 75%, 
+    blue 87.5%, 
+    black 87.5%,
+    black 100%);
+    background-size: contain, 335px 250px;
+    background-position: 0 0, 20% 35%;
+    background-repeat: no-repeat;
+}
+
+.move-cartridge {
+    /* Insert your changes */
+}
+
+#television {
+    height: 350px;
+    width: 500px;
+    margin: 0 auto;
+}
+
+#nes-console {
+    height: 200px;
+    width: 300px;
+    margin: 0 auto;
+    margin-top: 40px;
+    background-image: url("./resources/nes.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+#nes-cartridge {
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    left: 300px;
+    bottom: 0px;
+    background-image: url("./resources/contra-cartridge.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform:  perspective(100px) rotateX(45deg) rotateZ(30deg);
+}
