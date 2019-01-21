@@ -1,4 +1,7 @@
 /* Here below you should make your changes */
+
+/* Hjörtur Jóhann Vignisson og Ívar Kristinn Hallsson */
+
 @keyframes static {
     /* Insert your changes */
     
@@ -11,14 +14,14 @@
 @keyframes move-cartridge {
     /* Insert your changes */
     0% { 
-        transform: translate(0px, 0px);
+        transform: translate(0px, 0px) perspective(100px) rotateX(45deg) rotateZ(30deg);
         opacity: 1;
     }
-    50% {
+    75% {
         opacity: 1;
     }
     100% { 
-        transform: translate(200px, -330px); 
+        transform:  translate(150px, -350px) perspective(100px) rotateX(45deg) rotateZ(30deg); 
         opacity: 0;
     }
 }
@@ -33,6 +36,10 @@
 
 .level-1 {
     /* Insert your changes */
+    background-image: url("./resources/tv.png"), url("./resources/intro.png");
+    background-size: contain, 335px 250px;
+    background-position: 0 0, 25% 35%;
+    background-repeat: no-repeat;
 }
 
 .static {
