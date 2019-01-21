@@ -9,6 +9,8 @@
 
 @keyframes level-1 {
     /* Insert your changes */
+    0% { background-position: 0 0, 7px 40px; }
+    100% { background-position: 0 0, -2920px 40px; }
 }
 
 @keyframes move-cartridge {
@@ -36,15 +38,16 @@
 
 .level-1 {
     /* Insert your changes */
-    background-image: url("./resources/tv.png"), url("./resources/intro.png");
-    background-size: contain, 335px 250px;
-    background-position: 0 0, 25% 35%;
+    background-image: url("./resources/tv.png"), url("./resources/stage1.png");
+    background-size: contain, auto;
+    background-position: 0 0, 7px 40px;
     background-repeat: no-repeat;
+    animation: level-1 20s linear 0s 1 normal forwards running;
 }
 
 .static {
     /* Insert your changes */
-    background-image: url("./resources/tv.png"), 
+    background-image: url("./resources/tv.png"),
     linear-gradient(90deg,
     white 0%,
     white 12.5%,
