@@ -1,6 +1,10 @@
-/* Here below you should make your changes */
+/* Authors: Hjörtur Jóhann Vignisson and Ívar Kristinn Hallsson */
 
-/* Hjörtur Jóhann Vignisson og Ívar Kristinn Hallsson */
+/*TODO LIST
+Static animation
+Fix lvl1 width/post
+Spyrja um marggar backg img urls
+*/
 
 @keyframes static {
     /* Insert your changes */
@@ -53,13 +57,11 @@
 }
 
 @keyframes level-1 {
-    /* Insert your changes */
     0% { background-position: 0 0, 7px 40px; }
     100% { background-position: 0 0, -2920px 40px; }
 }
 
 @keyframes move-cartridge {
-    /* Insert your changes */
     0% { 
         transform: translate(0px, 0px) perspective(100px) rotateX(45deg) rotateZ(30deg);
         opacity: 1;
@@ -74,7 +76,6 @@
 }
 
 .intro {
-    /* Insert your changes */
     background-image: url("./resources/tv.png"), url("./resources/intro.png");
     background-size: contain, 335px 250px;
     background-position: 0 0, 25% 35%;
@@ -82,7 +83,6 @@
 }
 
 .level-1 {
-    /* Insert your changes */
     background-image: url("./resources/tv.png"), url("./resources/stage1.png");
     background-size: contain, auto;
     background-position: 0 0, 7px 40px;
@@ -96,7 +96,6 @@
 }
 
 .move-cartridge {
-    /* Insert your changes */
     animation: move-cartridge 2s ease-in-out 0s 1 normal forwards;
 }
 
