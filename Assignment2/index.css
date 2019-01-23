@@ -1,13 +1,6 @@
 /* Authors: Hjörtur Jóhann Vignisson and Ívar Kristinn Hallsson */
 
-/*TODO LIST
-Static animation
-Fix lvl1 width/post
-Spyrja um marggar backg img urls
-*/
-
 @keyframes static {
-    /* Insert your changes */
     from {
         background-image: url("./resources/tv.png"),
         linear-gradient(90deg,
@@ -57,20 +50,26 @@ Spyrja um marggar backg img urls
 }
 
 @keyframes level-1 {
-    0% { background-position: 0 0, 7px 40px; }
-    100% { background-position: 0 0, -2920px 40px; }
+    0% { 
+        background-position: 0 0, -1.5% 40px;
+        background-size: contain, 650% 68%;
+    }
+    100% { 
+        background-position: 0 0, 103.5% 40px; 
+        background-size: contain, 650% 68%;
+    }
 }
 
 @keyframes move-cartridge {
     0% { 
-        transform: translate(0px, 0px) perspective(100px) rotateX(45deg) rotateZ(30deg);
+        transform: translate(0%, 0%) perspective(100px) rotateX(45deg) rotateZ(30deg);
         opacity: 1;
     }
     75% {
         opacity: 1;
     }
     100% { 
-        transform:  translate(150px, -350px) perspective(100px) rotateX(45deg) rotateZ(30deg); 
+        transform:  translate(150%, -350%) perspective(100px) rotateX(45deg) rotateZ(30deg); 
         opacity: 0;
     }
 }
@@ -91,7 +90,6 @@ Spyrja um marggar backg img urls
 }
 
 .static {
-    /* Insert your changes */
     animation: static 2s linear 0s infinite alternate forwards;
 }
 
