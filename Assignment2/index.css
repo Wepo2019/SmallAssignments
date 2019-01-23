@@ -4,7 +4,52 @@
 
 @keyframes static {
     /* Insert your changes */
-    
+    from {
+        background-image: url("./resources/tv.png"),
+        linear-gradient(90deg,
+        white 0%,
+        white 12.5%,
+        yellow 12.5%, 
+        yellow 25%, 
+        cyan 25%, 
+        cyan 37.5%, 
+        green 37.5%, 
+        green 50%, 
+        purple 50%, 
+        purple 62.5%,
+        red 62.5%, 
+        red 75%, 
+        blue 75%, 
+        blue 87.5%, 
+        black 87.5%,
+        black 100%);
+        background-size: contain, 335px 250px;
+        background-position: 0 0, 20% 35%;
+        background-repeat: no-repeat;
+    }
+    to {
+        background-image: url("./resources/tv.png"),
+        linear-gradient(90deg,
+        black 0%,
+        black 12.5%,
+        blue 12.5%, 
+        blue 25%, 
+        red 25%, 
+        red 37.5%, 
+        purple 37.5%, 
+        purple 50%, 
+        green 50%, 
+        green 62.5%,
+        cyan 62.5%, 
+        cyan 75%, 
+        yellow 75%, 
+        yellow 87.5%, 
+        white 87.5%,
+        white 100%);
+        background-size: contain, 335px 250px;
+        background-position: 0 0, 20% 35%;
+        background-repeat: no-repeat;
+    }
 }
 
 @keyframes level-1 {
@@ -47,27 +92,6 @@
 
 .static {
     /* Insert your changes */
-    background-image: url("./resources/tv.png"),
-    linear-gradient(90deg,
-    white 0%,
-    white 12.5%,
-    yellow 12.5%, 
-    yellow 25%, 
-    cyan 25%, 
-    cyan 37.5%, 
-    green 37.5%, 
-    green 50%, 
-    purple 50%, 
-    purple 62.5%,
-    red 62.5%, 
-    red 75%, 
-    blue 75%, 
-    blue 87.5%, 
-    black 87.5%,
-    black 100%);
-    background-size: contain, 335px 250px;
-    background-position: 0 0, 20% 35%;
-    background-repeat: no-repeat;
     animation: static 2s linear 0s infinite alternate forwards;
 }
 
@@ -101,5 +125,5 @@
     background-image: url("./resources/contra-cartridge.png");
     background-size: contain;
     background-repeat: no-repeat;
-    transform:  perspective(100px) rotateX(45deg) rotateZ(30deg);
+    transform: perspective(100px) rotateX(45deg) rotateZ(30deg);
 }
