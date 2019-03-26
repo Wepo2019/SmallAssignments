@@ -7,6 +7,7 @@ body {
     display: block;
     height: 75px;
     border-bottom: solid 2px black;
+    box-shadow: 5px 5px 10px 2px rgb(77, 129, 77);
 }
 
 .navbar {
@@ -25,11 +26,9 @@ body {
     color: lime;
 }
 
-.home-logo {
-    margin-left: 50px;
-}
 
 .home-page {
+    margin-top: 4%;
     width: 40%;
     height: 20%;
     background-color: black;
@@ -39,10 +38,12 @@ body {
 
 .home-page h1 {
     color: lime;
+    box-shadow: 5px 5px 10px 2px rgb(77, 129, 77);
+    text-shadow: 5px 5px rgb(77, 129, 77);
 }
 
 .nav-link {
-    padding: 10px;
+   padding-left: 10px;
 }
 
 input {
@@ -52,9 +53,17 @@ input {
     font-size: 20px;
     margin: 4px;
     box-shadow: 5px 5px 10px 2px rgb(77, 129, 77);
+    margin-bottom: 25px;
 }
 
 ::placeholder {
     color: black;
 }
 
+.form-bosses h1 {
+    text-shadow: 5px 5px rgb(77, 129, 77);
+}
+.form-bosses {
+    box-shadow: 5px 5px 10px 2px rgb(77, 129, 77);
+    padding-left: 40px;
+}

@@ -64,7 +64,7 @@ class Bosses extends React.Component {
         return (
             <div>
                 <div className="form-bosses" >
-                    <p>Create a boss!</p>
+                    <h1>Create a new boss!</h1>
                     <form onClick={ e => this.createBoss(e) }>
                         <input type="text" name="newBossName" id="newBossName" value={this.state.newBoss.newBossName} onChange={ e => this.onInput(e) } placeholder ="Enter a name . . ."/>
                         <input type="text" name="newBossDescr" id="newBossDescr" value={this.state.newBoss.newBossDescr} onChange={ e => this.onInput(e) } placeholder ="Enter a description . . ."/>
