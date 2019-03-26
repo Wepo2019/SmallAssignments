@@ -1,5 +1,5 @@
 import bossService from '../services/bossService';
-import { GET_ALL_BOSSES } from '../constants/contants';
+import { GET_ALL_BOSSES } from '../constants/constants';
 
 export const getAllBosses = () => {
   return dispatch => {
