@@ -62,22 +62,22 @@ class BossItemDetail extends React.Component {
             <div style={{color: "lime"}}>
                 <h3>{ name }</h3>
                 <p>{ description }</p>
-                <img src={ img } alt="" width="42" height="42" />
+                <img src={ img } alt="" width="90" height="90" />
             </div>
             <div style={{color: "lime"}}>
                 <h4>Edit this boss:</h4>
                 <form>
                     <input type="text" name="changedBossName" id="changedBossName" value={ this.state.changedBoss.changedBossName } onChange={ e => this.onInput(e) } placeholder ={ name } />
                     <br/>
-                    <textarea rows="10" cols="100" name="changedBossDescr" id="changedBossDescr" value={ this.state.changedBoss.changedBossDescr } onChange={ e => this.onInput(e) } placeholder ={ description }/>
+                    <textarea rows="10" cols="100" className="text-area" name="changedBossDescr" id="changedBossDescr" value={ this.state.changedBoss.changedBossDescr } onChange={ e => this.onInput(e) } placeholder ={ description }/>
                     <br/>
                     <input type="text" name="changedBossImg" id="changedBossImg" value={ this.state.changedBoss.changedBossImg } onChange={ e => this.onInput(e) } placeholder ={ img }/>
                     <br/>
-                    <input type="submit" value ="submit" onClick={ e => this.changeBoss(e) } />
+                    <input type="submit" className="green-button" value ="submit" onClick={ e => this.changeBoss(e) } />
                 </form>
             </div>
             <div style={{color: "red"}}>
-                    <input type="submit" style={{backgroundColor: "red"}} value="DELETE" onClick={ e => this.deleteBoss(e) } />
+                    <input type="submit" className="red-button" value="DELETE" onClick={ e => this.deleteBoss(e) } />
             </div>
             </>
         )

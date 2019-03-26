@@ -10,7 +10,7 @@ const BossItem = (props) => {
             <div>
                 <h3>{ boss.name }</h3>
                 <p>{ boss.description }</p>
-                <img src={ boss.img } alt="" width="42" height="42" />
+                <img src={ boss.img } alt="" width="90" height="90" />
             </div>
         </Link>
     )
