@@ -1,18 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import BossItem from '../BossItem/BossItem';
 
 class Bosses extends React.Component {
-    
-    constructor(props) {
-        super(props);
-    }
-
     render() {
         const { bosses } = this.props; 
 
         return (
             <div>
-                { bosses.map((boss, index) => <h3 key={index}>{ boss.name }</h3>) }
+                { bosses.map((boss, index) => <BossItem key={"boosItem " + index} boss={boss} />) }
             </div>
         )
     }
