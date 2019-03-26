@@ -23,6 +23,7 @@ class Bosses extends React.Component {
 
     createBoss(e) {
         e.preventDefault();
+        console.log("Posting boss!");
         if(this.validate()) {
             const { newBoss } = this.state
             this.props.postNewBoss(
@@ -33,6 +34,7 @@ class Bosses extends React.Component {
                 }
             );
         }
+        //this.props.history.push("/bosses/" + this.props.bosses.length);
     }
 
     onInput(e) {
@@ -63,7 +65,7 @@ class Bosses extends React.Component {
 
         return (
             <div>
-                <div>
+                <div style={{color: "lime"}}>
                     <p>Create a boss!</p>
                     <form onClick={ e => this.createBoss(e) }>
                         <input type="text" name="newBossName" id="newBossName" value={this.state.newBoss.newBossName} onChange={ e => this.onInput(e) } placeholder ="Enter a name . . ."/>
@@ -72,7 +74,7 @@ class Bosses extends React.Component {
                         <input type="submit" value ="submit" />
                     </form>
                 </div>
-                { bosses.map((boss, index) => <BossItem key={"boosItem " + index} boss={boss} />) }
+                { bosses.map((boss, index) => <BossItem key={"boosItem " + index} boss={ boss } />) }
             </div>
         )
     }

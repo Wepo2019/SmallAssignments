@@ -19,12 +19,14 @@ const getAllBossesSuccess = bosses => {
 export const getBossById = id => {
   return dispatch => {
     return bossService.getBossById(id).then(boss => {
+      console.log(boss);
       dispatch(getBossByIdSuccess(boss));
     });
   };
 };
   
 const getBossByIdSuccess = boss => {
+  console.log(boss);
     return {
         type: GET_BOSS_BY_ID,
         payload: boss
@@ -34,8 +36,8 @@ const getBossByIdSuccess = boss => {
 export const postNewBoss = (newBossDetails) => {
   return dispatch => {
     return bossService.postNewBoss(newBossDetails).then(resp => {
-      console.log(resp);
       dispatch(postNewBossSuccess(resp.id, newBossDetails));
+      return resp.id;
     });
   };
 };

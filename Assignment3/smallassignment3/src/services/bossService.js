@@ -4,7 +4,7 @@ const bossService = () => {
     return {
         getAllBosses: () => fetch(ENDPOINT).then(bs => bs.json()).then(bs => bs),
         getBossById: (id) => fetch(ENDPOINT + "/" + id).then(b => b.json()).then(b => b),
-        postNewBoss: (newBoss) => { console.log(JSON.stringify(newBoss)); return fetch(ENDPOINT, {
+        postNewBoss: (newBoss) => { return fetch(ENDPOINT, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
