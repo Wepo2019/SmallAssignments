@@ -1,4 +1,4 @@
-import { GET_BOSS_BY_ID } from '../constants/constants';
+import { GET_BOSS_BY_ID, PATCH_BOSS_BY_ID } from '../constants/constants';
 
 const defaultState = {
     id: null,
@@ -14,6 +14,12 @@ export default function(state = defaultState, action) {
                                     description: action.payload.description,
                                     img: action.payload.img
                                 };
+    case PATCH_BOSS_BY_ID: return {
+                                    id: state.id,
+                                    name: action.payload.name,
+                                    description: action.payload.description,
+                                    img: action.payload.img
+                                  };
     default: return state;
   };
 };
