@@ -33,8 +33,13 @@ class Bosses extends React.Component {
                     img: newBoss.newBossImg 
                 }
             );
+            this.props.history.push("/bosses/" + this.props.bosses.length);
         }
-        //this.props.history.push("/bosses/" + this.props.bosses.length);
+        else {
+            this.setState({newBoss: { newBossName: "", newBossDescr: "", newBossImg: "" } });
+            alert("All boss fields required!");
+        }
+        
     }
 
     onInput(e) {
@@ -67,11 +72,11 @@ class Bosses extends React.Component {
             <div>
                 <div className="form-bosses" style={{color: "lime"}} >
                     <h1>Create a new boss!</h1>
-                    <form onClick={ e => this.createBoss(e) }>
+                    <form>
                         <input type="text" name="newBossName" id="newBossName" value={this.state.newBoss.newBossName} onChange={ e => this.onInput(e) } placeholder ="Enter a name . . ."/>
                         <input type="text" name="newBossDescr" id="newBossDescr" value={this.state.newBoss.newBossDescr} onChange={ e => this.onInput(e) } placeholder ="Enter a description . . ."/>
                         <input type="text" name="newBossImg" id="newBossImg" value={this.state.newBoss.newBossImg} onChange={ e => this.onInput(e) } placeholder ="Enter an image . . ."/>
-                        <input type="submit" value ="submit" />
+                        <input type="submit" value ="submit" onClick={ e => this.createBoss(e) } />
                     </form>
                 </div>
                 { bosses.map((boss, index) => <BossItem  className="bosses-list" key={"boosItem " + index} boss={boss} />) }

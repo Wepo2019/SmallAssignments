@@ -8,15 +8,40 @@ class BossItemDetail extends React.Component {
         this.props.getBossById(id);
     }
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            changedBoss: {
+                bossName: "",
+                bossDescr: "",
+                bossImg: ""
+            }
+        };
+    }
+
+    onInput(e) {
+        this.setState({
+            changedBoss: {
+                ...this.state.changedBoss,
+                [e.target.name]: e.target.value
+            }
+        });
+    }
+    
+    changeBoss(e) {
+
+    }
+
     render() {
         const { name, description, img } = this.props.boss;
 
         return (
             <div style={{color: "lime"}}>
-                <h2>{ name }</h2>
+                <h3>{ name }</h3>
                 <p>{ description }</p>
-                <img src={ img } alt="" width="126" height="126" />
+                <img src={ img } alt="" width="42" height="42" />
             </div>
+
         )
     }
 };
