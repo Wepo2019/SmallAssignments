@@ -1,31 +1,31 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import '../App.css';
+import React from 'react';
+import '../Styles/Styles.css';
+import { Route, Switch } from 'react-router-dom';
+import NavigationBar from './NavigationBar/NavigationBar';
+import Home from './Home/Home';
 
-class App extends Component {
+
+class App extends React.Component {
   componentDidMount() {
-    this.setState({ allBosses: this.props.bosses }) 
+    this.props.getAllBosses();
   }
 
   constructor(props) {
     super(props);
-    this.state = {
-      allBosses: [],
-    }
   }
 
   render() {
     return (
       <div>
+         <NavigationBar />
+            <div className="container">
+              <Switch>
+                  <Route exact path="/" component={ Home } />
+              </Switch>
+          </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = ({ bosses }) => {
-  return (
-    bosses
-  )
-}
-
-export default connect(mapStateToProps)(App);
+export default App;
