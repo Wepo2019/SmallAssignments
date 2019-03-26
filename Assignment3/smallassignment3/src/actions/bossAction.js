@@ -1,5 +1,5 @@
 import bossService from '../services/bossService';
-import { GET_ALL_BOSSES, GET_BOSS_BY_ID, POST_BOSS_BY_ID } from '../constants/constants';
+import * as CST from '../constants/constants';
 
 export const getAllBosses = () => {
   return dispatch => {
@@ -11,7 +11,7 @@ export const getAllBosses = () => {
 
 const getAllBossesSuccess = bosses => {
   return {
-    type: GET_ALL_BOSSES,
+    type: CST.GET_ALL_BOSSES,
     payload: bosses
   };
 };
@@ -19,21 +19,19 @@ const getAllBossesSuccess = bosses => {
 export const getBossById = id => {
   return dispatch => {
     return bossService.getBossById(id).then(boss => {
-      console.log(boss);
       dispatch(getBossByIdSuccess(boss));
     });
   };
 };
   
 const getBossByIdSuccess = boss => {
-  console.log(boss);
     return {
-        type: GET_BOSS_BY_ID,
+        type: CST.GET_BOSS_BY_ID,
         payload: boss
     };
 };
 
-export const postNewBoss = (newBossDetails) => {
+export const postNewBoss = newBossDetails => {
   return dispatch => {
     return bossService.postNewBoss(newBossDetails).then(resp => {
       dispatch(postNewBossSuccess(resp.id, newBossDetails));
@@ -43,11 +41,41 @@ export const postNewBoss = (newBossDetails) => {
 };
 
 const postNewBossSuccess = (id, newBossDetails) => {
-    return {
-      type: POST_BOSS_BY_ID,
-      payload: {
-        id,
-        newBossDetails
-      }
+  return {
+    type: CST.POST_BOSS_BY_ID,
+    payload: {
+      id,
+      newBossDetails
     }
+  }
+}
+
+export const deleteBossById = id => {
+  return dispatch => {
+    return bossService.deleteBossById(id).then(id => {
+      dispatch(deleteBossByIdSuccess(id));
+    });
+  };
+}; 
+
+const deleteBossByIdSuccess = id => {
+  return {
+    type: CST.DELETE_BOSS_BY_ID,
+    payload: id
+  }
+}
+
+export const patchBossById = (id, info) => {
+  return dispatch => {
+    return bossService.patchBossById(id, info).then(boss => {
+      dispatch(patchBossByIdSuccess(boss));
+    });
+  };
+}; 
+
+const patchBossByIdSuccess = boss => {
+  return {
+    type: CST.PATCH_BOSS_BY_ID,
+    payload: boss
+  }
 }

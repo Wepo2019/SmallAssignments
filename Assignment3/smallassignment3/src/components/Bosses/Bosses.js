@@ -4,7 +4,6 @@ import BossItem from '../BossItem/BossItem';
 import { postNewBoss } from '../../actions/bossAction';
 
 class Bosses extends React.Component {
-    
     constructor(props) {
         super(props);
         this.state = {
@@ -33,7 +32,7 @@ class Bosses extends React.Component {
                     img: newBoss.newBossImg 
                 }
             );
-            this.props.history.push("/bosses/" + this.props.bosses.length);
+            this.props.history.push("/bosses");
         }
         else {
             this.setState({newBoss: { newBossName: "", newBossDescr: "", newBossImg: "" } });
@@ -66,7 +65,7 @@ class Bosses extends React.Component {
     };
 
     render() {
-        const { bosses } = this.props; 
+        const { bosses } = this.props;
 
         return (
             <div>

@@ -1,11 +1,10 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { getBossById } from '../../actions/bossAction';
+import { getBossById, deleteBossById, patchBossById } from '../../actions/bossAction';
 
 class BossItemDetail extends React.Component {
     componentDidMount() {
-        const id = this.props.match.params.id;
-        this.props.getBossById(id);
+        this.props.getBossById(this.props.match.params.id);
     }
 
     constructor(props) {
@@ -35,10 +34,24 @@ class BossItemDetail extends React.Component {
     
     changeBoss(e) {
         e.preventDefault();
+        const obj = {};
+        if(this.state.changedBoss.changedBossName !== "") {
+            obj.name = this.state.changedBoss.changedBossName;
+        }
+        if(this.state.changedBoss.changedBossDescr !== "") {
+            obj.description = this.state.changedBoss.changedBossDescr;
+        }
+        if(this.state.changedBoss.changedBossImg !== "") {
+            obj.img = this.state.changedBoss.changedBossImg;
+        }
+
+        this.props.patchBossById(this.props.match.params.id, {...obj})
     }
 
     deleteBoss(e) {
         e.preventDefault();
+        this.props.deleteBossById(this.props.match.params.id);
+        this.props.history.push("/bosses");
     }
 
     render() {
@@ -77,4 +90,4 @@ const mapStateToProps = ({ boss }) => {
     };
 };
 
-export default connect(mapStateToProps, { getBossById })(BossItemDetail);
+export default connect(mapStateToProps, { getBossById, deleteBossById, patchBossById })(BossItemDetail);
