@@ -65,7 +65,7 @@ class Bosses extends React.Component {
 
         return (
             <div>
-                <div style={{color: "lime"}}>
+                <div className="form-bosses" style={{color: "lime"}} >
                     <p>Create a boss!</p>
                     <form onClick={ e => this.createBoss(e) }>
                         <input type="text" name="newBossName" id="newBossName" value={this.state.newBoss.newBossName} onChange={ e => this.onInput(e) } placeholder ="Enter a name . . ."/>
@@ -74,7 +74,7 @@ class Bosses extends React.Component {
                         <input type="submit" value ="submit" />
                     </form>
                 </div>
-                { bosses.map((boss, index) => <BossItem key={"boosItem " + index} boss={ boss } />) }
+                { bosses.map((boss, index) => <BossItem  className="bosses-list" key={"boosItem " + index} boss={boss} />) }
             </div>
         )
     }

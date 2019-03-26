@@ -44,3 +44,17 @@ body {
 .nav-link {
     padding: 10px;
 }
+
+input {
+    background-color: lime;
+    color: black;
+    border-color: lime;
+    font-size: 20px;
+    margin: 4px;
+    box-shadow: 5px 5px 10px 2px rgb(77, 129, 77);
+}
+
+::placeholder {
+    color: black;
+}
+
