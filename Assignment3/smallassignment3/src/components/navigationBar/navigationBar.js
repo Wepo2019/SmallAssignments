@@ -1,18 +1,12 @@
 import React from 'react';
-import { PropTypes } from 'prop-types';
-import { NavLink } from 'react-router-dom';
-
+import NavLinks from '../NavLinks/NavLinks';
 
 const NavigationBar = () => {
-    return (
-        <nav className="navbar">
-            <div>
-                <NavLink to="/"><img src="../../Bubblify2.png" id="logo"></img></NavLink>
-                <NavLink to="/" activeClassName="active" className="nav-link">Welcome page</NavLink>
-                <NavLink to="/Bosses" activeClassName="active"className="nav-link">Bosses</NavLink>
-            </div>
-        </nav>
-    )
+  return (
+    <nav className="navbar navbar-expand-lg  navigation-bar">
+        <NavLinks />
+    </nav>
+  )
 };
 
-export default NavLinks;
+export default NavigationBar;
