@@ -1,0 +1,30 @@
+body {
+    background-color:#E3DCFF;
+}
+
+.navigation-bar {
+    background-color: black;
+    display: block;
+    height: 75px;
+    border-bottom: solid 2px black;
+}
+
+.navbar {
+    background-color: black;
+    display: block;
+    height: 75px;
+    border-bottom: solid 2px black;
+}
+.nav-link {
+    color: white;
+    font-size: 25px;
+    float: left;
+}
+
+.nav-link:hover {
+    color: limegreen;
+}
+
+.home-logo {
+    margin-left: 50px;
+}

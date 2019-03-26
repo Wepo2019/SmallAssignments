@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import '../App.css';
+
+import '../Styles/Styles.css';
 
 class App extends Component {
   componentDidMount() {
@@ -9,6 +10,13 @@ class App extends Component {
   render() {
     return (
       <div>
+         <NavigationBar />
+            <div className="container">
+              <Switch>
+                  <Route exact path="/" component={ Home } />
+                  <Route exact path="/bosses" component={ Bosses } />
+              </Switch>
+          </div>
       </div>
     );
   }
