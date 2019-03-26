@@ -17,13 +17,18 @@ body {
     border-bottom: solid 2px black;
 }
 .nav-link {
-    color: white;
+    color: lime;
     font-size: 25px;
     text-decoration: none;
+    font-size: 35px;
+    text-shadow: 5px 5px rgb(77, 129, 77);
+    float: left;
 }
 
 .nav-link:hover {
     color: lime;
+    text-shadow: 5px 5px rgb(77, 129, 77);
+    font-size: 45px;
 }
 
 
@@ -58,6 +63,7 @@ input {
 
 ::placeholder {
     color: black;
+    font-weight: bold;
 }
 
 .form-bosses h1 {
@@ -66,4 +72,37 @@ input {
 .form-bosses {
     box-shadow: 5px 5px 10px 2px rgb(77, 129, 77);
     padding-left: 40px;
+}
+
+.green-button {
+    width: 90px;
+    height: 40px;
+}
+.green-button:hover {
+    width: 180px;
+    height: 90px;
+    font-size: 40px;
+}
+.red-button {
+    background-color: red;
+    border: red;
+    box-shadow: 5px 5px 10px 2px  rgb(164, 6, 6);
+    width: 90px;
+    height: 40px;
+    margin-bottom: 100px;
+    
+}
+.red-button:hover {
+    width: 180px;
+    height: 90px;
+    font-size: 40px;
+}
+
+.text-area {
+    background-color: lime;
+    border: lime;
+}
+
+h4 {
+    color: lime;
 }
