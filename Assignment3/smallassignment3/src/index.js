@@ -9,6 +9,7 @@ import { Provider, connect } from 'react-redux';
 import { getAllBosses } from './actions/bossAction';
 import reducers from './reducers/bossReducer';
 
+getAllBosses();
 const AppWithRedux = connect(null, { getAllBosses })(App);
 
 ReactDOM.render(<Provider store={ createStore(reducers, applyMiddleware(thunk)) }><AppWithRedux /></Provider>, document.getElementById('root'));

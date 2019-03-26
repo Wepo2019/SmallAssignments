@@ -1,9 +1,17 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 import '../App.css';
 
 class App extends Component {
   componentDidMount() {
-    this.props.getAllBosses();
+    this.setState({ allBosses: this.props.bosses }) 
+  }
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      allBosses: [],
+    }
   }
 
   render() {
@@ -14,4 +22,10 @@ class App extends Component {
   }
 }
 
-export default App;
+const mapStateToProps = ({ bosses }) => {
+  return (
+    bosses
+  )
+}
+
+export default connect(mapStateToProps)(App);

@@ -12,17 +12,17 @@ export const getAllBosses = () => {
 export const getBossById = (id) => {
     return dispatch => {
       return bossService.getBossById(id).then(boss => {
-        dispatch(getAllBossesSuccess(boss));
+        dispatch(getBossByIdSuccess(boss));
       });
     };
   };
   
-  const getBossByIdSuccess = boss => {
+const getBossByIdSuccess = boss => {
     return {
-      type: GET_BOSS_BY_ID,
-      payload: boss
+        type: GET_BOSS_BY_ID,
+        payload: boss
     };
-  };
+};
 
 const getAllBossesSuccess = bosses => {
   return {
