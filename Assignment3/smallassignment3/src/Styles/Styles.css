@@ -1,5 +1,5 @@
 body {
-    background-color:#E3DCFF;
+    background-color: black;
 }
 
 .navigation-bar {
@@ -18,13 +18,29 @@ body {
 .nav-link {
     color: white;
     font-size: 25px;
-    float: left;
+    text-decoration: none;
 }
 
 .nav-link:hover {
-    color: limegreen;
+    color: lime;
 }
 
 .home-logo {
     margin-left: 50px;
+}
+
+.home-page {
+    width: 40%;
+    height: 20%;
+    background-color: black;
+    color: white;
+    margin-left: 10%;
+}
+
+.home-page h1 {
+    color: lime;
+}
+
+.nav-link {
+    padding: 10px;
 }
