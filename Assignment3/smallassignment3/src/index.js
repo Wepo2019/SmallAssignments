@@ -7,7 +7,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider, connect } from 'react-redux';
 import { getAllBosses } from './actions/bossAction';
-import reducers from './reducers/bossesReducer';
+import reducers from './reducers/bossReducer';
 
 const AppWithRedux = connect(null, { getAllBosses })(App);
 
