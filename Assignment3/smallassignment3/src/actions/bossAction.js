@@ -1,5 +1,5 @@
 import bossService from '../services/bossService';
-import { GET_ALL_BOSSES, GET_BOSS_BY_ID } from '../constants/constants';
+import { GET_ALL_BOSSES, GET_BOSS_BY_ID, POST_BOSS_BY_ID } from '../constants/constants';
 
 export const getAllBosses = () => {
   return dispatch => {
@@ -9,13 +9,20 @@ export const getAllBosses = () => {
   };
 };
 
-export const getBossById = (id) => {
-    return dispatch => {
-      return bossService.getBossById(id).then(boss => {
-        dispatch(getBossByIdSuccess(boss));
-      });
-    };
+const getAllBossesSuccess = bosses => {
+  return {
+    type: GET_ALL_BOSSES,
+    payload: bosses
   };
+};
+
+export const getBossById = id => {
+  return dispatch => {
+    return bossService.getBossById(id).then(boss => {
+      dispatch(getBossByIdSuccess(boss));
+    });
+  };
+};
   
 const getBossByIdSuccess = boss => {
     return {
@@ -24,9 +31,21 @@ const getBossByIdSuccess = boss => {
     };
 };
 
-const getAllBossesSuccess = bosses => {
-  return {
-    type: GET_ALL_BOSSES,
-    payload: bosses
+export const postNewBoss = (newBossDetails) => {
+  return dispatch => {
+    return bossService.postNewBoss(newBossDetails).then(resp => {
+      console.log(resp);
+      dispatch(postNewBossSuccess(resp.id, newBossDetails));
+    });
   };
 };
+
+const postNewBossSuccess = (id, newBossDetails) => {
+    return {
+      type: POST_BOSS_BY_ID,
+      payload: {
+        id,
+        newBossDetails
+      }
+    }
+}
